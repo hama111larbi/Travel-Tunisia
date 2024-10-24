@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hotel1</title>
+    <link rel="stylesheet" href="hotel1.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Travel</a>
+        <nav class="navbar">
+            <a href="hotles.html">Hotels</a>
+            <a href="plans.html">Plans</a>
+            <a href="logout.php">Logout</a>
+        </nav>
+    </header>
+
+
+    
+
+    <div class="reservation-container">
+        <h2>Hotel Reservation</h2>
+        <form class="reservation-form" id="reservationForm" onsubmit="redirectToConfirmationPage(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+            </div>
+            <div class="form-group">
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+            <div class="form-group">
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" name="room-type" required>
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="suite">Suite</option>
+                </select>
+            </div>
+                <button type="submit" class="reserve-btn">Reserve Now</button>
+
+           
+        </form>
+    </div>
+    
+    <script>
+        function redirectToConfirmationPage(event) {
+            event.preventDefault();
+            // You can also validate the form data here if needed
+
+            // Redirect to the confirmation page
+            window.location.href = 'confirmation.html';
+        }
+    </script>
+
+</body>
+</html>
